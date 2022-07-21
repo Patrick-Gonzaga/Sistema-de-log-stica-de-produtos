@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;500;700;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css.css" />
+
+  <body>
+    <section
+      class="container-main display-flex justify-content-center align-itens-center"
+    >
+      <div class="cadastrar-produto display-flex flex-direction-column">
+        <div class="container-title-cadastrar-produto">
+          <figure class="figure-cadastrar-produto">
+            <img
+              class="img-cadastrar-produto"
+              src="./img/Logo Add prod.png"
+              alt=""
+            />
+          </figure>
+          <h1>Cadastrar produto</h1>
+        </div>
+        <div class="display-flex flex-direction-column align-itens-center">
+          <form
+            action="get"
+            class="forms display-flex flex-direction-column align-itens-center"
+          >
+            <div class="box-nome-produto">
+              <div class="box-label-nome-produto">
+                <label for="nome-produto">Nome do produto</label>
+              </div>
+              <input type="text" id="nome-produto" placeholder="Caneta" />
+            </div>
+            <br />
+            <div
+              class="box-quantidade display-flex justify-content-center alig"
+            >
+              <label for="input-quantidade">Quantidade</label>
+              <div class="gambiarra-select-quantidade">
+                <input
+                  type="number"
+                  placeholder="0"
+                  id="input-quantidade"
+                  size="10px"
+                  min="0"
+                  max="99"
+                />
+              </div>
+            </div>
+            <div class="box-preco">
+              <br />
+              <div class="box-preco-valor">
+                <label for="preco">Valor</label>
+              </div>
+              <input type="number" id="preco" placeholder="9.99" />
+            </div>
+            <br />
+          </form>
+          <div class="buttons display-flex">
+            <button class="button-cadastro" onclick="cadastrarProduto()">
+              Cadastrar
+            </button>
+            <button class="button-apagar" onclick="produto.apagarInput()">
+              Apagar
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="container-lista-produtos-cadastrados">
+        <div
+          class="container-title-produtos-cadastrados display-flex justify-content-center align-itens-center"
+        >
+          <figure style="margin: 0px" class="logo-title-produtos-cadastrados">
+            <img
+              src="./img/__box_product_settings-256.webp"
+              alt=""
+              style="width: 35px"
+            />
+          </figure>
+          <h1>Produtos Cadastrados</h1>
+        </div>
+        <div class="container-produtos-cadastrados">
+          <div class="box-produtos-cadastrados">
+            <section class="input-search-box display-flex align-itens-center">
+              <input type="search" class="input-search" style="border: none" />
+              <button
+                style="background: none; border: none; cursor: pointer"
+                class="button-filter-a"
+              >
+                <img
+                  src="./img/3844432_magnifier_search_zoom_icon.ico"
+                  style="width: 30px"
+                />
+              </button>
+            </section>
+            <section class="lista-produtos-cadastrados">
+              <table border="1">
+                <thead>
+                  <th class="text-align-center">ID</th>
+                  <th>Produto</th>
+                  <th class="text-align-center">Qtd</th>
+                  <th>Valor</th>
+                  <th class="text-align-center">Ações</th>
+                </thead>
+                <tbody id="tbody"></tbody>
+              </table>
+            </section>
+          </div>
+        </div>
+        <button class="button-apagar-filtro" style="width: 100px">
+          Apagar filtro
+        </button>
+      </div>
+      <section class="container-editar-produtos">
+        <div class="container-h1">
+          <figure class="logo-edit">
+            <img src="./img/icons8-edit-product-100.png" alt="" />
+          </figure>
+          <h1>Editar produto</h1>
+        </div>
+
+        <div class="container-editar-nome">
+          <label for="input-editar-nome">Nome</label>
+          <input id="input-editar-nome" type="text" />
+        </div>
+
+        <div class="container-editar-quantidade">
+          <label for="input-editar-quantidade">Quantidade</label>
+          <input
+            id="input-editar-quantidade"
+            type="number"
+            name=""
+            min="0"
+            id=""
+          />
+        </div>
+
+        <div class="container-editar-valor">
+          <label for="input-editar-valor">Valor</label>
+          <input id="input-editar-valor" type="number" name="" min="0" id="" />
+        </div>
+        <div class="buttons-edit">
+          <button class="edit-button">Editar</button>
+        </div>
+      </section>
+    </section>
+  </body>
+  <script src="JS.js"></script>
+</html>
